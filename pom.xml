@@ -12,22 +12,23 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>daq-log</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
   <name>daq-log</name>
+  <description>The logging sub-system of the Surface Data Acquisition system for the IceCube Project.</description>
 
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <testSourceDirectory>test/java</testSourceDirectory>
-    <resources>
-      <resource>
-        <directory>resources/jar</directory>
-      </resource>
-    </resources>
-    <testResources>
-      <testResource>
-        <directory>resources/test/jar</directory>
-      </testResource>
-    </testResources>
-  </build>
+  <scm>
+    <connection>scm:svn:http://code.icecube.wisc.edu/daq/projects/${project.name}/trunk</connection>
+    <developerConnection>scm:svn:http://code.icecube.wisc.edu/daq/projects/${project.name}/trunk</developerConnection>
+    <tag>HEAD</tag>
+    <url>http://code.icecube.wisc.edu/daq/projects/${project.name}</url>
+  </scm>
 
+  <!-- Dependencies for this project.  These should not contain
+  versions.  The versions needed should be specified in the top-level
+  pom's dependencyManagement -->
+  <dependencies>
+    <dependency>
+      <groupId>edu.wisc.icecube</groupId>
+      <artifactId>daq-common</artifactId>
+    </dependency>
+  </dependencies>
 </project>
